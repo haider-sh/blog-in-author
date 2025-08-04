@@ -7,7 +7,7 @@ const router = createBrowserRouter(routes);
 
 function AppProvider() {
 
-    let [loggedIn, setLoggedIn] = useState(false);
+    let [loggedIn, setLoggedIn] = useState(Boolean(isLoggedIn()));
 
     function saveJwtToken(token) {
         localStorage.setItem("token", token);
@@ -23,7 +23,7 @@ function AppProvider() {
     }
 
     return (
-        <AppContext.Provider value={{ saveJwtToken, loggedIn, isLoggedIn, setLoggedIn, logUserOut }}>
+        <AppContext.Provider value={{ saveJwtToken, loggedIn, setLoggedIn, logUserOut }}>
             <RouterProvider router={router} />
         </AppContext.Provider>
     );

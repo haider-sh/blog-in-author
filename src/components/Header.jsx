@@ -5,7 +5,7 @@ import { AppContext } from "../AppContext";
 
 function Header() {
 
-    let { isLoggedIn, logUserOut, loggedIn } = useContext(AppContext);
+    let {logUserOut, loggedIn } = useContext(AppContext);
 
     return (
         <div className="header">
@@ -17,23 +17,23 @@ function Header() {
             </div>
             <div className="links">
                 {
-                    (isLoggedIn() || loggedIn) &&
+                    loggedIn &&
                     <Link to="/posts/create" >Create Post</Link>
                 }
                 {
-                    (isLoggedIn() || loggedIn) &&
+                    loggedIn &&
                     <Link to="/">Blog</Link>
                 }
                 {
-                    (!isLoggedIn() && !loggedIn) &&
+                    !loggedIn &&
                     <Link to="/login">Log In</Link>
                 }
                 {
-                    (!isLoggedIn() && !loggedIn) &&
+                    !loggedIn &&
                     <Link to="/signup">Sign Up</Link>
                 }
                 {
-                    (isLoggedIn() || loggedIn) &&
+                    loggedIn &&
                     <Link onClick={logUserOut} >Logout</Link>
                 }
             </div>

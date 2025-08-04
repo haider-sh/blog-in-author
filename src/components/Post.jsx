@@ -7,7 +7,7 @@ function Post({ id, title, description, date, author, content, isPublished, edit
 
     function deletePost(id) {
         return async () => {
-            const response = await fetch(`http://localhost:8080/posts/${id}/delete`,
+            const response = await fetch(`https://blog-in-backend.vercel.app/posts/${id}/delete`,
                 {
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
@@ -27,7 +27,7 @@ function Post({ id, title, description, date, author, content, isPublished, edit
 
     function updatePublishStatus(id) {
         return async () => {
-            const response = await fetch(`http://localhost:8080/posts/${id}/toggleStatus`,
+            const response = await fetch(`https://blog-in-backend.vercel.app/posts/${id}/toggleStatus`,
                 {
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
