@@ -1,0 +1,46 @@
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background-color: #F5F5F5;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+}
+
+.name{
+    display: flex;
+    flex: 0 0 40%;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+    h1{
+        font-size: 24px;
+        padding: 0;
+    }
+}
+
+.icon > img{
+    width: 70px;
+}
+
+.links{
+    display: flex;
+    flex: 0 0 20%;
+    gap: 10px;
+    font-size: 18px;
+    padding: 20px;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+.page {
+    font-family: 'Libertinus Serif', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-width: 380px;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    font-size: 18px;
+
+    p{
+        margin: 0;
+    }
+
+    .title {
+        font-size: 38px;
+        font-weight: 800;
+    }
+
+    .info,
+    .author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .description {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 30px;
+        border-bottom: 1px dotted gray;
+    }
+
+    .comments{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+
+        .input{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px dotted gray;
+            padding-bottom: 40px;
+        }
+
+        input, button{
+            font-size: 16px;
+            padding: 10px;
+            width: 80%;
+            border: none;
+            outline: none;
+            background-color: #f2f2f2;
+            border-radius: 20px;
+        }
+
+        button{
+            background-color: transparent;
+            width: auto;
+            padding: 0;
+        }
+
+        .comment{
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px;
+            gap: 20px;
+            border-bottom: 1px dotted gray;
+            font-size: 18px;
+
+            .info-actions{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .info{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .icon > svg{
+                width: 40px;
+                height: auto;
+            }
+
+            .name-date{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .name{
+                flex: 0;
+                padding: 0;
+            }
+        }
+    }
+}
