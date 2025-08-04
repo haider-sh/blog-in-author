@@ -13,7 +13,7 @@ function PostForm() {
     let navigate = useNavigate();
 
     async function savePost() {
-        const response = await fetch(`http://localhost:8080/posts/create`,
+        const response = await fetch(`https://blog-in-backend.vercel.app/posts/create`,
             {
                 method: "POST",
                 headers: {

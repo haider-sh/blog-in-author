@@ -13,7 +13,7 @@ function Home() {
 
     useEffect(() => {
         async function getPosts() {
-            const response = await fetch("http://localhost:8080/posts/author?from=0&limit=2",
+            const response = await fetch("https://blog-in-backend.vercel.app/posts/author?from=0&limit=2",
                 {
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
@@ -44,7 +44,7 @@ function Home() {
 
     function searchBlog() {
         return async () => {
-            const response = await fetch(`http://localhost:8080/posts/author?search=${search}&from=0&limit=2`,
+            const response = await fetch(`https://blog-in-backend.vercel.app/posts/author?search=${search}&from=0&limit=2`,
                 {
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
@@ -66,7 +66,7 @@ function Home() {
 
     function showNextPost(index) {
         return async () => {
-            const response = await fetch(`http://localhost:8080/posts/author?from=${index * 2}&limit=2`,
+            const response = await fetch(`https://blog-in-backend.vercel.app/posts/author?from=${index * 2}&limit=2`,
                 {
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`

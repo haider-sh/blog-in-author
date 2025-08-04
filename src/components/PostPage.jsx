@@ -13,7 +13,7 @@ function PostPage() {
 
     useEffect(() => {
         async function getPostById() {
-            const response = await fetch(`http://localhost:8080/posts/${id}`);
+            const response = await fetch(`https://blog-in-backend.vercel.app/posts/${id}`);
             const post = await response.json();
 
             if (!post.success) {
@@ -28,7 +28,7 @@ function PostPage() {
 
     function deleteComment(commentId){
         return async () => {
-            const response = await fetch(`http://localhost:8080/posts/${id}/comments/${commentId}/delete`, 
+            const response = await fetch(`https://blog-in-backend.vercel.app/posts/${id}/comments/${commentId}/delete`, 
                 {
                     headers : {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
